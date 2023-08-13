@@ -1,6 +1,8 @@
 public class Checking extends Account {
-    public Checking(String name) {
-        super(name);
+    int debitCardNumber;
+    int debitCardPIN;
+    public Checking(String name, String SSN, double initDeposit) {
+        super(name, SSN, initDeposit);
         System.out.println("Account Type is Checking Account");
     }
 }
