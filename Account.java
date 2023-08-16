@@ -9,11 +9,9 @@ public abstract class Account implements InterestBaseRate {
         this.name = name;
         this.SSN = SSN;
         this.balance = initDeposit;
-        System.out.println("Name: " + this.name + " SSN: " + this.SSN + " Balance: $" + this.balance);
 
         index++;
         this.accountNumber = setAccountNumber();
-        System.out.println("Account Number: " + this.accountNumber);
     }
     // The account number should has the last two digits of the SSN , 5 unique numbers , and 3 random numbers
     private String setAccountNumber() {
@@ -21,5 +19,10 @@ public abstract class Account implements InterestBaseRate {
         int uniqueID = index;
         int randomNumber = (int)(Math.random() * Math.pow(10, 3));
         return lastTwoOfSSN + uniqueID + randomNumber;
+    }
+    public void showInfo() {
+        System.out.println("Name: " + this.name +
+                "\nAccount Number: " + this.accountNumber +
+                "\nBalance: " + this.balance);
     }
 }

@@ -3,6 +3,9 @@ public class Savings extends Account {
     int safetyDepositBoxKey;
     public Savings(String name, String SSN, double initDeposit) {
         super(name, SSN, initDeposit);
-        System.out.println("Account Type is Savings Account");
+    }
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("Accout Type: Savings Account");
     }
 }
