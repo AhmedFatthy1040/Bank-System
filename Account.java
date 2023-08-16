@@ -23,6 +23,27 @@ public abstract class Account implements IBaseRate {
         int randomNumber = (int)(Math.random() * Math.pow(10, 3));
         return lastTwoOfSSN + uniqueID + randomNumber;
     }
+//    Transactions Methods Start
+    public void deposit(double amount) {
+        balance = balance + amount;
+        System.out.println("Depositing $" + amount);
+        printBalance();
+    }
+    public void withdraw(double amount) {
+        balance = balance - amount;
+        System.out.println("Withdrawing $" + amount);
+        printBalance();
+    }
+    public void transfer(String toWhere, double amount) {
+        balance = balance - amount;
+        // Not Complete
+        System.out.println("Transferring $" + amount + " to" + toWhere);
+        printBalance();
+    }
+    //    Transactions Methods End
+    public void printBalance() {
+        System.out.println("Your Balance is Now: " + balance);
+    }
     public void showInfo() {
         System.out.println("Name: " + this.name +
                 "\nAccount Number: " + this.accountNumber +
