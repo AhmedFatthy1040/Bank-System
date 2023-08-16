@@ -1,6 +1,6 @@
 public class Savings extends Account {
-    int safetyDepositBoxID;
-    int safetyDepositBoxKey;
+    private int safetyDepositBoxID;
+    private int safetyDepositBoxKey;
     public Savings(String name, String SSN, double initDeposit) {
         super(name, SSN, initDeposit);
         accountNumber = "1" + accountNumber;

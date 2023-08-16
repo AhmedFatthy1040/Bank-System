@@ -1,10 +1,10 @@
 public abstract class Account implements IBaseRate {
-    String name;
-    String SSN;
-    double balance;
-    static int index = 10000;
-    String accountNumber;
-    double rate;
+    private String name;
+    private String SSN;
+    private double balance;
+    private static int index = 10000;
+    protected String accountNumber;
+    protected double rate;
     public Account(String name, String SSN, double initDeposit) {
         this.name = name;
         this.SSN = SSN;
