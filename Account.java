@@ -1,4 +1,4 @@
-public abstract class Account implements InterestBaseRate {
+public abstract class Account implements IBaseRate {
     String name;
     String SSN;
     double balance;
@@ -12,7 +12,10 @@ public abstract class Account implements InterestBaseRate {
 
         index++;
         this.accountNumber = setAccountNumber();
+
+        setRate();
     }
+    public abstract void setRate();
     // The account number should has the last two digits of the SSN , 5 unique numbers , and 3 random numbers
     private String setAccountNumber() {
         String lastTwoOfSSN = SSN.substring(SSN.length() - 2);
@@ -23,6 +26,7 @@ public abstract class Account implements InterestBaseRate {
     public void showInfo() {
         System.out.println("Name: " + this.name +
                 "\nAccount Number: " + this.accountNumber +
-                "\nBalance: " + this.balance);
+                "\nBalance: " + this.balance +
+                "\nRate: " + this.rate + "%");
     }
 }
