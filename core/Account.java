@@ -1,3 +1,5 @@
+package core;
+
 public abstract class Account implements IBaseRate {
     private String name;
     private String SSN;
@@ -50,9 +52,18 @@ public abstract class Account implements IBaseRate {
     public void printBalance() {
         System.out.println("Your Balance is Now: " + balance);
     }
+    public String getName() {
+        return this.name;
+    }
+    public String getSSN() {
+        return this.SSN;
+    }
+    public double getBalance() {
+        return this.balance;
+    }
     public void showInfo() {
         System.out.println("Name: " + this.name +
-                "\nAccount Number: " + this.accountNumber +
+                "\ncore.Account Number: " + this.accountNumber +
                 "\nBalance: " + this.balance +
                 "\nRate: " + this.rate + "%");
     }

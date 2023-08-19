@@ -1,3 +1,7 @@
+package core;
+
+import core.Account;
+
 public class Savings extends Account {
     private int safetyDepositBoxID;
     private int safetyDepositBoxKey;
@@ -16,7 +20,7 @@ public class Savings extends Account {
     }
     public void showInfo() {
         super.showInfo();
-        System.out.println(" Your Savings Account Features" +
+        System.out.println(" Your core.Savings core.Account Features" +
                 "\n Safety Deposit Box ID: " + safetyDepositBoxID +
                 "\n Safety Deposit Box Ket: " + safetyDepositBoxKey);
     }

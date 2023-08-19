@@ -1,3 +1,7 @@
+package core;
+
+import core.Account;
+
 public class Checking extends Account {
     private int debitCardNumber;
     private int debitCardPIN;
@@ -16,7 +20,7 @@ public class Checking extends Account {
     }
     public void showInfo() {
         super.showInfo();
-        System.out.println(" Your Checking Account Features" +
+        System.out.println(" Your core.Checking core.Account Features" +
                 "\n Debit Card Number: " + debitCardNumber +
                 "\n Debit Card PIN: " + debitCardPIN);
     }
